@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Lover",
+    "backgroundColor": "#FFC0CB", // Pastel pink
+    "textColor": "#FFFFFF", // White
+    "buttonColor": "#FF69B4", // Hot pink
+    "fontFamily": "Pacifico" // A playful font
+  },
+  {
+    "name": "Folklore",
+    "backgroundColor": "#F5F5DC", // Beige
+    "textColor": "#000000", // Black
+    "buttonColor": "#8B4513", // Brown
+    "fontFamily": "Cormorant" // A serif font
+  },
+  {
+    "name": "1989",
+    "backgroundColor": "#87CEEB", // Sky blue
+    "textColor": "#FFFFFF", // White
+    "buttonColor": "#FFD700", // Gold
+    "fontFamily": "Arial" // A modern font
+  },
+  {
+    "name": "Reputation",
+    "backgroundColor": "#000000", // Black
+    "textColor": "#FF0000", // Red
+    "buttonColor": "#808080", // Gray
+    "fontFamily": "Roboto" // A bold font
+  }
+]

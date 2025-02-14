@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+    <VerticalStackLayout Padding="20">
+        <Label Text="Welcome to The Vault" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+        <!-- Search Bar -->
+        <SearchBar x:Name="productSearchBar" 
+                   Placeholder="Search for products..." 
+                   TextChanged="OnSearchTextChanged"/>
+
+        <!-- Product Start Date -->
+        <Label Text="Start Date"/>
+        <DatePicker x:Name="startDatePicker"/>
+        <Button Text="Save Start Date" Clicked="OnSaveStartDateClicked"/>
+
+        <!-- Buttons -->
+        <Button Text="Add Product to Vault" Clicked="OnAddProductClicked"/>
+        <Button Text="View My Vault" Clicked="OnViewVaultClicked"/>
+
+        <!-- List View to display products -->
+        <ListView x:Name="vaultListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Brand}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>
+    
+<Picker x:Name="ThemePicker" SelectedIndexChanged="OnThemeChanged">
+    <Picker.Items>
+        <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <String>Reputation</String>
+                <String>Folklore</String>
+                <String>Evermore</String>
+                <String>1989</String>
+            </x:Array>
+        </Picker.ItemsSource>
+    </Picker.Items>
+</Picker>
+    
+<StackLayout Padding="20">
+    <!-- Theme Picker -->
+    <Picker x:Name="ThemePicker" 
+            Title="Choose a Theme" 
+            ItemDisplayBinding="{Binding Name}" 
+            SelectedIndexChanged="OnThemeSelected" />
+
+    <!-- Title -->
+    <Label Text="Welcome to Skincare App!" 
+           FontSize="Large" 
+           HorizontalOptions="Center" 
+           VerticalOptions="Start" />
+
+    <!-- Input field for skin type -->
+    <Entry Placeholder="Enter your skin type (e.g., oily, dry)" 
+           x:Name="SkinTypeEntry" />
+
+    <!-- Button to get tips -->
+    <Button Text="Get Skincare Tips" 
+            Clicked="OnGetTipsClicked" 
+            HorizontalOptions="Center" />
+
+    <!-- Label to display tips -->
+    <Label x:Name="TipsLabel" 
+           Text="" 
+           FontSize="Medium" 
+           HorizontalOptions="Center" 
+           VerticalOptions="CenterAndExpand" />
+</StackLayout>

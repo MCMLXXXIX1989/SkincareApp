@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.SkincareTrackerPage"
+             Title="Skincare Tracker">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <!-- Title -->
+            <Label Text="Track Your Skincare Goals" 
+                   FontSize="Large" 
+                   HorizontalOptions="Center" />
+
+            <!-- Debut: Glass Skin -->
+            <Frame BackgroundColor="#FFC0CB" Padding="10">
+                <StackLayout>
+                    <Label Text="🌸 Debut: Glass Skin" 
+                           FontSize="Medium" 
+                           TextColor="#000000" />
+                    <Label Text="Achieve clear, glowing, and translucent skin." 
+                           FontSize="Small" 
+                           TextColor="#000000" />
+                    <Button Text="Track Progress" 
+                            BackgroundColor="#FFFFFF" 
+                            TextColor="#FFC0CB" 
+                            Clicked="OnTrackProgressClicked" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Reputation: Oily Skin & Blackheads -->
+            <Frame BackgroundColor="#1c1c1c" Padding="10">
+                <StackLayout>
+                    <Label Text="🖤 Reputation: Oily Skin & Blackheads" 
+                           FontSize="Medium" 
+                           TextColor="Silver" />
+                    <Label Text="Control excess oil and prevent blackheads." 
+                           FontSize="Small" 
+                           TextColor="Silver" />
+                    <Button Text="Track Progress" 
+                            BackgroundColor="Silver" 
+                            TextColor="#1c1c1c" 
+                            Clicked="OnTrackProgressClicked" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Add more albums here -->
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+    
+<ListView x:Name="GoalsListView">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                <StackLayout Padding="10">
+                    <Label Text="{Binding Album}" FontSize="Medium" />
+                    <Label Text="{Binding Goal}" FontSize="Small" />
+                    <Label Text="{Binding Emoji}" FontSize="Large" />
+                    <Label Text="{Binding Date, StringFormat='Tracked on {0:MM/dd/yyyy}'}" FontSize="Small" />
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>

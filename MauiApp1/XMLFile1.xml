@@ -1,0 +1,10 @@
+﻿private async void DisplayQuote()
+{
+string[] quotes = {
+"This is a story about a girl who loves skincare.",
+"You are the best thing that's ever been mine.",
+"Take a deep breath, let it all out, and feel beautiful."
+};
+var randomQuote = quotes[new Random().Next(quotes.Length)];
+await DisplayAlert("Swiftie Wisdom", randomQuote, "OK");
+}

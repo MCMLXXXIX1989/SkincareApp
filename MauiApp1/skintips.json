@@ -1,0 +1,38 @@
+﻿{
+	"skintypes": [
+		{
+			"type": "oily",
+			"tips": [
+				"use a high ph cleanser that foams or bubbles.",
+				"Apply oil-free moisturizer.",
+				"Avoid heavy creams."
+				"i enjoy the byoma niacinamide gel cream"
+			]
+		},
+		{
+			"type": "dry",
+			"tips": [
+				"use low ph cleanser that are a cream, gel, or milk texture.",
+				"Apply a rich moisturizer.",
+				"Avoid harsh physical exfoliants."
+			]
+		},
+		{
+			"type": "combination",
+			"tips": [
+				"try double cleansing.",
+				"Apply spot treatments as needed.",
+				"Use a lightweight moisturizer."
+				"at night i will use cream on parts of my face and sleeping face masks on others"
+			]
+		},
+		{
+			"type": "sensitive",
+			"tips": [
+				"Use fragrance-free products.",
+				"Patch-test new products.",
+				"Avoid alcohol-based toners."
+			]
+		}
+	]
+}

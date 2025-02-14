@@ -1,0 +1,19 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.ProductReviewPage">
+    <VerticalStackLayout Padding="20">
+        <Label Text="Rate this product" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+        <!-- Rating Slider -->
+        <Slider x:Name="ratingSlider" Minimum="1" Maximum="5" />
+
+        <!-- Review Editor -->
+        <Editor x:Name="reviewEditor" Placeholder="Write your review" />
+
+        <!-- Submit Button -->
+        <Button Text="Submit Review" Clicked="OnSubmitReviewClicked"/>
+    </VerticalStackLayout>
+</ContentPage>
+    
+<Slider Minimum="0" Maximum="5" Value="0" />
+<Label Text="Rate this product" />

@@ -1,0 +1,28 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.RoutinePage">
+    <VerticalStackLayout Padding="20">
+        <Label Text="My Skincare Routine" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+        <!-- List to show routine products -->
+        <ListView x:Name="routineListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Brand}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Button to add product to routine -->
+        <Button Text="Add to Routine" Clicked="OnAddToRoutineClicked"/>
+    </VerticalStackLayout>
+</ContentPage>
+    
+using Xamarin.Essentials;
+
+private async void PlayBackgroundMusic()
+{
+    var url = "https://example.com/taylor-swift-music.mp3";  // Example URL, replace with actual streaming URL.
+    var player = new MediaPlayer();
+    await player.Play(url);
+}
